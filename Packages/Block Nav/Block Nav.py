@@ -144,9 +144,19 @@ class BlockNavCommand( sublime_plugin.TextCommand ):
 
         (
 
-          cfg[ 'v_dir' ] > 0 and
+          cfg[ 'v_dir' ] > 0
 
-          cfg[ 'depth_offset' ] == 0 and
+          and
+
+          (
+
+            cfg[ 'depth_offset' ] == 0 or
+
+            re.search( r'[\(\[\{]\s*$', view.substr( start_line ) )
+
+          )
+
+          and
 
           current_line_start in [ ')', ']', '}', '', None ]
 
