@@ -79,7 +79,7 @@ class BlockNavCommand( sublime_plugin.TextCommand ):
 
     search_lines = view.lines( search_region )
 
-    if cfg[ 'v_dir' ] < 0 :
+    if ( cfg[ 'v_dir' ] < 0 ):
 
       search_lines.reverse()
 
