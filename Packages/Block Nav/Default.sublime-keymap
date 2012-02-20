@@ -1,0 +1,73 @@
+[
+
+  {
+
+    "keys" : [ "ctrl+shift+b", "up" ],
+
+    "command" : "block_nav",
+
+    "args" : {
+
+      "v_dir" : -1,
+
+      "depth_offset" : 0
+
+    }
+
+  }
+
+  ,
+
+  {
+
+    "keys" : [ "ctrl+shift+b", "left" ],
+
+    "command" : "block_nav",
+
+    "args" : {
+
+      "v_dir" : -1,
+
+      "depth_offset" : -1
+
+    }
+
+  }
+
+  ,
+
+  {
+
+    "keys" : [ "ctrl+shift+b", "down" ],
+
+    "command" : "block_nav",
+
+    "args" : {
+
+      "v_dir" : 1,
+
+      "depth_offset" : 0
+
+    }
+
+  }
+
+  ,
+
+  {
+
+    "keys" : [ "ctrl+shift+b", "right" ],
+
+    "command" : "block_nav",
+
+    "args" : {
+
+      "v_dir" : 1,
+
+      "depth_offset" : 1
+
+    }
+
+  }
+
+]
