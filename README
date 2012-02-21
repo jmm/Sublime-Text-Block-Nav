@@ -1,0 +1,56 @@
+Block Nav plugin for Sublime Text 2.
+Copyright 2012 Jesse McCarthy <http://jessemccarthy.net/>.
+
+The Software may be used under the MIT (aka X11) license or Simplified
+BSD (aka FreeBSD) license.  See LICENSE
+
+Adds functionality to assist with navigating block structures in
+"braceless" languages like Ruby and Python where brace matching can
+not be used.
+
+Adds a command that can be called from key bindings to navigate to the
+start / end of block structures such as classes, methods, functions,
+and blocks.
+
+The operation of the plugin is based on indentation, so it will only
+work for well-indented code, that does not mix tabs and spaces.
+
+
+USAGE:
+
+See the keymap for bindings.  It includes commands to navigate:
+
+* Up and out (northwest), to find the beginning of the block
+structure that the current line is nested in.
+
+* Up (north), for example to find the beginning of IF / ELSEIF blocks
+that correspond to ELSEIF / ELSE blocks.  Or, when on a line of Ruby
+code containing an 'end' keyword for something like a method, to find
+the line where it started.  When on the 'end' line for something like
+and IF expression with ELSIF / ELSE clauses, will navigate to start
+lines for intervening ELSIF / ELSE clauses on the way to the start
+line for the IF expression.
+
+* Down (south), for example to find the beginning of ELSEIF / ELSE
+blocks that correspeond to IF / ELSEIF blocks.
+
+* Down and in (southeast), to find the end of the block structure that
+begins on the current line.
+
+
+Does not currently do anything when the cursor is on a line that
+contains only whitespace.  Start with the cursor on a line that
+contains non-whitespace and that is nested within the block you want
+to find the start of.
+
+With the currently included key bindings it's unfortunately easy to
+accidentally screw up the key combo and accidentally invoke the
+built-in key binding to shift the current line up / down, so be
+careful.
+
+
+TO DO:
+
+* Figure out better key bindings?
+
+* Handle starting on a line containing only whitespace?
